@@ -59,9 +59,11 @@ const Header = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
             </div>
             
-            <Button variant="ghost" size="icon" className="relative">
-              <User className="h-5 w-5" />
-            </Button>
+            <Link to="/auth">
+              <Button variant="ghost" size="icon" className="relative">
+                <User className="h-5 w-5" />
+              </Button>
+            </Link>
             
             <Button variant="ghost" size="icon" className="relative" onClick={addToCart}>
               <ShoppingCart className="h-5 w-5" />
@@ -94,6 +96,7 @@ const Header = () => {
               <Link to="/products" className="font-medium hover:text-bazaar-green transition-colors">Products</Link>
               <Link to="/about" className="font-medium hover:text-bazaar-green transition-colors">About Us</Link>
               <Link to="/contact" className="font-medium hover:text-bazaar-green transition-colors">Contact</Link>
+              <Link to="/auth" className="font-medium hover:text-bazaar-green transition-colors">Login / Sign Up</Link>
             </div>
             
             <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
@@ -106,11 +109,7 @@ const Header = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               </div>
               
-              <div className="flex items-center space-x-2">
-                <Button variant="ghost" size="icon">
-                  <User className="h-5 w-5" />
-                </Button>
-                
+              <div className="flex items-center space-x-2">                
                 <Button variant="ghost" size="icon" className="relative" onClick={addToCart}>
                   <ShoppingCart className="h-5 w-5" />
                   {cartItemCount > 0 && (
