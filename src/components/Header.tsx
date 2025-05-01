@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ShoppingCart, Search, Menu, X, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -34,17 +35,17 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold text-bazaar-green font-poppins">Farmer<span className="text-bazaar-orange">Bazaar</span></span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="font-medium hover:text-bazaar-green transition-colors">Home</a>
-            <a href="/products" className="font-medium hover:text-bazaar-green transition-colors">Products</a>
-            <a href="/about" className="font-medium hover:text-bazaar-green transition-colors">About Us</a>
-            <a href="/contact" className="font-medium hover:text-bazaar-green transition-colors">Contact</a>
+            <Link to="/" className="font-medium hover:text-bazaar-green transition-colors">Home</Link>
+            <Link to="/products" className="font-medium hover:text-bazaar-green transition-colors">Products</Link>
+            <Link to="/about" className="font-medium hover:text-bazaar-green transition-colors">About Us</Link>
+            <Link to="/contact" className="font-medium hover:text-bazaar-green transition-colors">Contact</Link>
           </nav>
 
           {/* Search & Cart for desktop */}
@@ -89,10 +90,10 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <a href="/" className="font-medium hover:text-bazaar-green transition-colors">Home</a>
-              <a href="/products" className="font-medium hover:text-bazaar-green transition-colors">Products</a>
-              <a href="/about" className="font-medium hover:text-bazaar-green transition-colors">About Us</a>
-              <a href="/contact" className="font-medium hover:text-bazaar-green transition-colors">Contact</a>
+              <Link to="/" className="font-medium hover:text-bazaar-green transition-colors">Home</Link>
+              <Link to="/products" className="font-medium hover:text-bazaar-green transition-colors">Products</Link>
+              <Link to="/about" className="font-medium hover:text-bazaar-green transition-colors">About Us</Link>
+              <Link to="/contact" className="font-medium hover:text-bazaar-green transition-colors">Contact</Link>
             </div>
             
             <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
