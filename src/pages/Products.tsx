@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import AddProductForm from "@/components/AddProductForm";
 import { useToast } from "@/hooks/use-toast";
+import CategoryNavBar from "../components/CategoryNavBar";
 
 const Products = () => {
   const [showAddProductForm, setShowAddProductForm] = useState(false);
@@ -14,7 +15,10 @@ const Products = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow pt-24 pb-12 px-4">
+      <div className="pt-20">
+        <CategoryNavBar />
+      </div>
+      <main className="flex-grow pt-4 pb-12 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="flex justify-between items-center mb-8">
             <h1 className="text-3xl font-bold font-poppins text-bazaar-green">Products</h1>

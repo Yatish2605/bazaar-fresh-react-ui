@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-white shadow-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -59,6 +59,20 @@ const Header = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
             </div>
             
+            <div className="flex items-center space-x-2">
+              <Link to="/products">
+                <Button className="bg-bazaar-green hover:bg-bazaar-green/90 text-white">
+                  BUY
+                </Button>
+              </Link>
+              
+              <Link to="/products">
+                <Button className="bg-bazaar-orange hover:bg-bazaar-orange/90 text-white">
+                  SELL
+                </Button>
+              </Link>
+            </div>
+
             <Link to="/auth">
               <Button variant="ghost" size="icon" className="relative">
                 <User className="h-5 w-5" />
@@ -97,6 +111,20 @@ const Header = () => {
               <Link to="/about" className="font-medium hover:text-bazaar-green transition-colors">About Us</Link>
               <Link to="/contact" className="font-medium hover:text-bazaar-green transition-colors">Contact</Link>
               <Link to="/auth" className="font-medium hover:text-bazaar-green transition-colors">Login / Sign Up</Link>
+              
+              <div className="flex space-x-2 pt-2">
+                <Link to="/products" className="flex-1">
+                  <Button className="w-full bg-bazaar-green hover:bg-bazaar-green/90 text-white">
+                    BUY
+                  </Button>
+                </Link>
+                
+                <Link to="/products" className="flex-1">
+                  <Button className="w-full bg-bazaar-orange hover:bg-bazaar-orange/90 text-white">
+                    SELL
+                  </Button>
+                </Link>
+              </div>
             </div>
             
             <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
