@@ -11,6 +11,7 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Auth from "./pages/Auth";
 import CategoryProducts from "./pages/CategoryProducts";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +26,7 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Index />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/category/:categoryName" element={<CategoryProducts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

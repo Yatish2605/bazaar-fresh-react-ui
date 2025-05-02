@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -26,19 +27,23 @@ const Hero = () => {
             harvested fresh and delivered straight to your home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button 
-              size="lg"
-              className="bg-bazaar-green hover:bg-bazaar-green-dark text-white font-semibold px-8 shine hover-shadow-grow"
-            >
-              Shop Now
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 font-semibold px-8 hover-shadow-grow"
-            >
-              Learn More
-            </Button>
+            <Link to="/products">
+              <Button 
+                size="lg"
+                className="bg-bazaar-green hover:bg-bazaar-green-dark text-white font-semibold px-8 shine hover-shadow-grow"
+              >
+                Shop Now
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 font-semibold px-8 hover-shadow-grow"
+              >
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

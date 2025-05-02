@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -74,6 +75,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState<any>(null);
   const [quantity, setQuantity] = useState(1);
   const { toast } = useToast();
+  const navigate = useNavigate();
   
   useEffect(() => {
     // Find the product by ID
@@ -88,6 +90,19 @@ const ProductDetail = () => {
       title: "Added to cart",
       description: `${quantity} ${product.name} added to your cart`,
     });
+  };
+
+  const handleBuyNow = () => {
+    toast({
+      title: "Processing purchase",
+      description: `Preparing ${quantity} ${product.name} for checkout`,
+    });
+    
+    // In a real app, this would navigate to checkout
+    // For now, we'll just show a toast and redirect after a delay
+    setTimeout(() => {
+      navigate('/products');
+    }, 1500);
   };
 
   if (!product) {
@@ -164,6 +179,7 @@ const ProductDetail = () => {
                 <Button
                   variant="secondary"
                   className="bg-bazaar-orange hover:bg-bazaar-orange/90 text-white px-8 py-2"
+                  onClick={handleBuyNow}
                 >
                   Buy Now
                 </Button>
