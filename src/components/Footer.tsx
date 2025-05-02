@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
@@ -9,20 +9,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About Farmer Bazaar</h3>
+            <h3 className="text-lg font-semibold mb-4">About Root2Door</h3>
             <p className="text-gray-600 mb-4">
               We connect local farmers directly with consumers, providing fresh, 
               organic produce while supporting sustainable farming practices.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-bazaar-green transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="https://www.linkedin.com/in/yatishgottapu" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-bazaar-green transition-colors" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-500 hover:text-bazaar-green transition-colors">
+              <a href="https://www.instagram.com/yatishgottapu" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-bazaar-green transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-500 hover:text-bazaar-green transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="mailto:yatishgottapu2026@gmail.com" className="text-gray-500 hover:text-bazaar-green transition-colors" aria-label="Email">
+                <Mail className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -72,10 +72,18 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
             <address className="not-italic text-gray-600 space-y-2">
-              <p>123 Farm Road, Harvest Valley</p>
-              <p>Greenfield, CA 95463</p>
-              <p>Email: <a href="mailto:info@farmerbazaar.com" className="hover:text-bazaar-green transition-colors">info@farmerbazaar.com</a></p>
-              <p>Phone: <a href="tel:+15551234567" className="hover:text-bazaar-green transition-colors">(555) 123-4567</a></p>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-bazaar-green" />
+                <p>Visakhapatnam, 530003</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-bazaar-green" />
+                <p>Email: <a href="mailto:yatishgottapu2026@gmail.com" className="hover:text-bazaar-green transition-colors">yatishgottapu2026@gmail.com</a></p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-bazaar-green" />
+                <p>Phone: <a href="tel:+917989479005" className="hover:text-bazaar-green transition-colors">+91 7989479005</a></p>
+              </div>
             </address>
           </div>
         </div>
@@ -83,7 +91,7 @@ const Footer = () => {
         <Separator className="my-8" />
 
         <div className="text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Farmer Bazaar. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Root2Door. All rights reserved.</p>
         </div>
       </div>
     </footer>
